@@ -1,15 +1,15 @@
-# Contribution [#]: [Issue Title]
+# Contribution 1: Integrate Google Cloud Storage for storage backend
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** 1  
+**Student:** Hayzie Chu
+**Issue:** [https://github.com/Portabase/portabase/issues/266]
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+I chose this issue because it aligns with my interest in Cloud and familiarity with TypeScript and React. The issue is also clearly defined with specific files and task checklist, as well as being a "good first issue".
 
 ---
 
@@ -17,19 +17,26 @@
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+As a tool for backing up and restoring database instances, it would benefit from having support for Google Cloud storage as a storage provider.
 
 ### Expected Behavior
 
-[What should happen?]
+The tool should show Google Cloud as an available option for providers, and have Google Cloud configuration in create and edit mode.
 
 ### Current Behavior
 
-[What actually happens?]
+There is no current support and integration with Google Cloud as a provider.
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+Relevant files: 
+src/features/storages/providers/index.ts
+src/features/storages/types.ts
+src/components/wrappers/dashboard/admin/channels/channel/channel-form/providers/storages/forms/google-cloud-storage.schema.ts
+src/components/wrappers/dashboard/admin/channels/channel/channel-form/providers/storages/forms/google-cloud-storage.form.tsx
+src/components/wrappers/dashboard/admin/channels/channel/channel-form/channel-form.schema.ts
+src/components/wrappers/dashboard/admin/channels/helpers/storage.tsx
+src/components/wrappers/dashboard/admin/channels/helpers/common.tsx
 
 ---
 
