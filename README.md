@@ -1,9 +1,9 @@
 # Contribution 1: Integrate Google Cloud Storage for storage backend
 
 **Contribution Number:** 1  
-**Student:** Hayzie Chu
-**Issue:** [https://github.com/Portabase/portabase/issues/266]
-**Status:** [Phase I] [Complete]
+**Student:** Hayzie Chu  
+**Issue:** [https://github.com/Portabase/portabase/issues/266]  
+**Status:** [Phase I] [Complete]  
 
 ---
 
