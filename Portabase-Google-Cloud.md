@@ -214,7 +214,7 @@ I used the folder structure (google-cloud-storage/index.ts + sibling files) to m
 
 **PR Link:** [GitHub PR URL when submitted](https://github.com/Portabase/portabase/pull/316)
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** 
 # Validation Requirements screenshots:
 - “Add Storage Channel” dialog showing Google Cloud Storage as an available provider
 <img width="1470" height="798" alt="dialog-providers" src="https://github.com/user-attachments/assets/6a8a3cc1-a43a-4db2-b627-81c986f0a75b" />
@@ -234,7 +234,7 @@ Note: the ping/upload path hasn't been tested against a real GCS bucket yet, but
 - [Jun 19th]: Needs to be tested with a real GCS bucket, using the https://github.com/fsouza/fake-gcs-server to test the integration.
 - [Jun 21st]: I read through the linked repo and given docker compose yml script, created a new test directory and relevant scripts to test with a real bucket, making a minor change to the codebase that is needed for local tests, not production.
 
-**Status:** Awaiting review
+**Status:** Iterating
 
 ---
 
