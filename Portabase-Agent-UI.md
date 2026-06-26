@@ -80,41 +80,31 @@ The root cause is the dashboard count query has no isArchived filter. When an ag
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+I will look through the codebase to identify how the agent is created, stored, and counted, as well as how these information is displayed. Then I will check the counting logic and identify where the issue lies. If it's not some minor error but a major decision and logic change, I will communicate with the maintainers to discuss and get approval first.
 
 ### Implementation Plan
 
-Using UMPIRE framework (adapted):
+**Understand:** The count of Agents for each account is not decremented when an Agent is deleted, and still counts it as active.
 
-**Understand:** [Restate the problem]
-
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** On the same dashboard, there are counts for Projects, Organizations, etc. display as well. I can look into this as guides for the display and count logic reference. Additionally, there are other pages and functions that works with the Agents database.
 
 **Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+1. Check out all relevant, matching logics for counting, display, and Agents.
+2. Implement a filter on the RoutePage function, following other functions working with the Agents database.
+3. Test the counting logic in different cases.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** [Link to your branch/commits as you work](https://github.com/hayzie-chu/portabase/tree/agent-count)
 
 **Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+Yes, and I have commented and been given permission to work on this on the issue.
 
 **Evaluate:** [How will you verify it works?]
+I will start up the server from my local machine and then perform a few Agents deletion/creation test cases manually to check the count is correctly updated.
 
 ---
 
 ## Testing Strategy
-
-### Unit Tests
-
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
-
-### Integration Tests
-
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+The project doesn't have equivalent/relevant testing files and ci flows for this change, as it's a specific logic just for UI display and not a standalone function and doesn't impact functionality.
 
 ### Manual Testing
 
@@ -124,9 +114,9 @@ Using UMPIRE framework (adapted):
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 1 Progress
 
-[What you built this week, challenges faced, decisions made]
+I recreated and tracked down the source of the issue through exploring the codebase and comparing it to similar counting displays and cross-checked other functions working with the Agents database. Found that agents/page.tsx:19 and services/agent.ts:40 both filter isArchived for counting Agents, only the Dashboard doesn't.
 
 ### Week [Y] Progress
 
@@ -134,7 +124,7 @@ Using UMPIRE framework (adapted):
 
 ### Code Changes
 
-- **Files modified:** [List]
+- **Files modified:** portabase/app/(customer)/dashboard/home/page.tsx
 - **Key commits:** [Links to important commits]
 - **Approach decisions:** [Why you chose certain approaches]
 
