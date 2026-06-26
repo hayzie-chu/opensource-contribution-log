@@ -141,15 +141,18 @@ I found that when an Agent is deleted, it's not entirely removed from the databa
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** [GitHub PR URL when submitted](https://github.com/Portabase/portabase/pull/336)
 
 **PR Description:** [Draft or final PR description - much of the content above can be adapted]
+
+The agents count in RoutePage() in app/(customer)/dashboard/home/page.tsx doesn't filter the deleted (archived) agents, so the counter also counts deleted agents as active, leading to the inaccurate count issue.
 
 **Maintainer Feedback:**
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** Awaiting review
+[Awaiting review / Iterating / Approved / Merged]
 
 ---
 
@@ -157,15 +160,15 @@ I found that when an Agent is deleted, it's not entirely removed from the databa
 
 ### Technical Skills Gained
 
-[What you learned technically]
+I have learned to navigate a codebase and identify sources of an issue based on UI imperical evidence and utilize matching functions to find the error in a pattern. This would be helpful when I'm jumping into a new large codebase/project, and improves my troubleshooting skills.  
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+It was at first challenging to know what to search to find relevant places in the codebase to look at. I was able to rely on my past contribution, which got me more familiar with how the project is structured. I also learned to use the UI to make educated guesses on what the matching functions can be.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+This was not a particular issue for this process, but I had started on searching the codebase to try and find the source of the issue before getting confirmation from the maintainers that the issue can be worked on and needed. I will reach out and wait for their approval first before starting the process to avoid wasted efforts
 
 ---
 
