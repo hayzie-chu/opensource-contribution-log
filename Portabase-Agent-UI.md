@@ -112,6 +112,12 @@ The project doesn't have equivalent/relevant testing files and ci flows for this
 ### Manual Testing
 
 [What you tested manually and results]
+I tested these following scenarios, and checking the dashboard page after each to see the count is correctly updated.
+
+1. adding 2 agents (to make sure it still works with increments) => 2
+2. adding 2 agents and deleting 1 of them => 1
+3. adding 2 agents and deleting 1 of them, then adding another agent => 2
+4. deleting all remaining agents from the 3rd case => 0
 
 ---
 
@@ -121,15 +127,15 @@ The project doesn't have equivalent/relevant testing files and ci flows for this
 
 I recreated and tracked down the source of the issue through exploring the codebase and comparing it to similar counting displays and cross-checked other functions working with the Agents database. Found that agents/page.tsx:19 and services/agent.ts:40 both filter isArchived for counting Agents, only the Dashboard doesn't.
 
-### Week [Y] Progress
+### Week 2 Progress
 
-[Continue documenting as you work]
+I found that when an Agent is deleted, it's not entirely removed from the database but just switched to an archived state. Therefore, we need to filter out these agents when counting the Agents table, instead of just reporting how many lines is in the table. This fix worked during testing.
 
 ### Code Changes
 
 - **Files modified:** portabase/app/(customer)/dashboard/home/page.tsx
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Key commits:** [Links to important commits](https://github.com/hayzie-chu/portabase/commit/4424542d23408aa6d460b79faa4606fc72c77c94)
+- **Approach decisions:** I decided to continue with the existing approach of not completely erasing the deleted agents, but to filter them out during counts. This is aligned with other functions counting the agents in other pages.
 
 ---
 
