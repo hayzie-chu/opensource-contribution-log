@@ -234,7 +234,7 @@ Note: the ping/upload path hasn't been tested against a real GCS bucket yet, but
 - [Jun 19th]: Needs to be tested with a real GCS bucket, using the https://github.com/fsouza/fake-gcs-server to test the integration.
 - [Jun 21st]: I read through the linked repo and given docker compose yml script, created a new test directory and relevant scripts to test with a real bucket, making a minor change to the codebase that is needed for local tests, not production.
 
-**Status:** Iterating
+**Status:** Merged
 
 ---
 
