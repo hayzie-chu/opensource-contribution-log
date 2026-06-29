@@ -6,7 +6,7 @@
 
 **Issue:** [https://github.com/Portabase/portabase/issues/271]
 
-**Status:** [Phase III] [In progress]
+**Status:** [Phase IV] [Complete]
 
 ---
 
@@ -151,7 +151,7 @@ The agents count in RoutePage() in app/(customer)/dashboard/home/page.tsx doesn'
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
-**Status:** Awaiting review
+**Status:** Merged
 [Awaiting review / Iterating / Approved / Merged]
 
 ---
@@ -169,11 +169,3 @@ It was at first challenging to know what to search to find relevant places in th
 ### What I'd Do Differently Next Time
 
 This was not a particular issue for this process, but I had started on searching the codebase to try and find the source of the issue before getting confirmation from the maintainers that the issue can be worked on and needed. I will reach out and wait for their approval first before starting the process to avoid wasted efforts
-
----
-
-## Resources Used
-
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
